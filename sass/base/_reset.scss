@@ -1,0 +1,31 @@
+@font-face {
+  font-family: salom;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+body {
+  font-family: salom;
+  background-color: $background;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input,
+select {
+  outline: none;
+}

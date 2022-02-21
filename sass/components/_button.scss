@@ -1,0 +1,13 @@
+.btn {
+  color: $background;
+  text-decoration: underline crimson;
+  font-size: 1.3rem;
+
+  font-weight: 900;
+}
+.star__btn {
+  margin-right: 8rem;
+  @include respons(small) {
+    font-size: 1rem;
+  }
+}

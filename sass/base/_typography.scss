@@ -1,0 +1,34 @@
+.image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  @include respons(tab-land) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.heading {
+  text-transform: uppercase;
+  color: #9a9a9a;
+  font-size: 1.6rem;
+  @include respons(phone) {
+    font-size: 0.9rem;
+  }
+}
+.paragraf {
+  color: #929292;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  @include respons(small) {
+    font-size: 1rem;
+  }
+}
+.draw {
+  width: 100%;
+  height: 1px;
+  background-color: #9a9a9a;
+  margin: 3rem 0;
+  @include respons(phone) {
+    margin: 0.5rem 0;
+  }
+}

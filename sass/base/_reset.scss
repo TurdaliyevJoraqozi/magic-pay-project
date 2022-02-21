@@ -5,6 +5,9 @@
 body {
   font-family: salom;
   background-color: $background;
+  @include respons(tab-land) {
+    background-color: #fff;
+  }
 }
 html {
   font-size: 62.5%;
@@ -13,6 +16,9 @@ html {
   display: block;
   margin: 0 auto;
   width: 80%;
+  @include respons(tab-land) {
+    width: 95%;
+  }
 }
 * {
   padding: 0;
@@ -28,4 +34,24 @@ li {
 input,
 select {
   outline: none;
+}
+svg {
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.6s;
+  &:hover {
+    fill: $background;
+  }
+  @include respons(tab-land) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  @include respons(phone) {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  @include respons(phone) {
+    height: 1rem;
+    width: 1rem;
+  }
 }

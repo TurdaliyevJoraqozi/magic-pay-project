@@ -1,2 +1,37 @@
 $background: #cc295d;
 $left-backgroud: #333333;
+
+// QUERY MANAGER
+
+@mixin respons($breakpoint) {
+  @if $breakpoint==big {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+    // 1800px
+  }
+  @if $breakpoint==tab-land {
+    @media (max-width: 69.8125em) {
+      @content;
+      // 1200
+    }
+  }
+  @if $breakpoint==tab-port {
+    @media (max-width: 49.625em) {
+      @content;
+      // 900px
+    }
+  }
+  @if $breakpoint==phone {
+    @media (max-width: 43.75em) {
+      @content;
+      // 462px
+    }
+  }
+  @if $breakpoint==small {
+    @media (max-width: 28.125em) {
+      @content;
+      // 312px
+    }
+  }
+}

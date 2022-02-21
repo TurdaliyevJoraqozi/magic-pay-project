@@ -1,0 +1,333 @@
+.section__hero {
+  img {
+    width: 20rem;
+  }
+}
+.main {
+  display: flex;
+  @include respons(tab-land) {
+    flex-direction: column;
+  }
+  &__left {
+    width: 15%;
+    background-color: $left-backgroud;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respons(tab-land) {
+      flex-direction: row;
+      width: 100%;
+      height: 5rem;
+    }
+    @include respons(tab-land) {
+      height: 4rem;
+    }
+    &--menus {
+      @include respons(tab-land) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 2rem 0;
+      padding-left: 4rem;
+      transition: all 0.4s;
+      transform: scale(0.8);
+      @include respons(tab-land) {
+        align-items: center;
+        height: 5rem;
+      }
+      @include respons(tab-land) {
+        height: 4rem;
+      }
+      @include respons(small) {
+        padding: 0;
+        text-align: center;
+      }
+      svg {
+        fill: #fff;
+        margin-right: 1rem;
+        @include respons(small) {
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+      p {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.2rem;
+        @include respons(tab-land) {
+          display: flex;
+        }
+        @include respons(small) {
+          font-size: 0.9rem;
+        }
+      }
+      &:hover {
+        background-color: $background;
+        transform: scale(1);
+      }
+    }
+    &--footer {
+      text-align: center;
+      color: #fff;
+      margin: 0.8rem 0;
+      @include respons(tab-land) {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    width: 85%;
+    background-color: #fff;
+    @include respons(tab-land) {
+      width: 100%;
+    }
+  }
+  .section {
+    &__hero {
+      display: flex;
+      img {
+        width: 33.3%;
+        height: 18rem;
+        @include respons(small) {
+          height: 12rem;
+        }
+      }
+      @include respons(tab-port) {
+        height: 15rem;
+      }
+      @include respons(small) {
+        height: 12rem;
+      }
+    }
+    &__stars {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 6rem;
+      padding: 2rem 1.2rem;
+      background-color: #fff;
+      @include respons(tab-port) {
+        height: 4rem;
+      }
+      @include respons(small) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem 0.2rem;
+      }
+
+      &__left {
+        display: flex;
+        &--stars--item {
+          margin-top: -0.3rem;
+
+          &:first-child {
+            margin-left: 1.4rem;
+          }
+        }
+      }
+      &__right {
+        display: flex;
+        svg {
+          fill: $background;
+          margin-right: 1rem;
+        }
+        &-votes {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $background;
+          color: #fff;
+          padding: 1.2rem;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    }
+    &__letters {
+      background-color: #f9f8f8;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      padding: 3rem;
+      @include respons(phone) {
+        display: flex;
+        flex-direction: column;
+      }
+      &--left {
+        background-color: #fff;
+        padding: 2rem;
+        height: 45rem;
+        @include respons(tab-port) {
+          height: 50rem;
+        }
+        @include respons(phone) {
+          height: 38rem;
+        }
+        @include respons(small) {
+          height: auto;
+        }
+        &--head {
+          margin-bottom: 3rem;
+          p {
+            &:first-child {
+              margin-bottom: 2rem;
+            }
+          }
+          margin-bottom: 4rem;
+        }
+        &--middle {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin-bottom: 3rem;
+          @include respons(small) {
+            margin-bottom: 0;
+          }
+
+          li {
+            margin-bottom: 0.6rem;
+            a {
+              font-size: 1.3rem;
+              color: #c2b6b6;
+              @include respons(small) {
+                font-size: 1rem;
+              }
+            }
+          }
+          &--1 {
+            display: flex;
+            flex-direction: column;
+          }
+          span {
+            color: crimson;
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin-right: 0.5rem;
+          }
+        }
+        &--footer {
+          display: flex;
+          justify-content: space-between;
+          @include respons(small) {
+            display: flex;
+            flex-direction: column;
+          }
+          &--paragraf {
+            margin-top: 1rem;
+          }
+          &-images {
+            position: relative;
+            border: 3px solid #fff;
+
+            &--1 {
+              position: absolute;
+              right: 8rem;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(2);
+                z-index: 20;
+              }
+            }
+            &--2 {
+              position: absolute;
+              z-index: 2;
+              right: 6rem;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(2);
+                z-index: 20;
+              }
+            }
+            &--3 {
+              position: absolute;
+              z-index: 3;
+              right: 4rem;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(2);
+                z-index: 20;
+              }
+            }
+            &--4 {
+              position: absolute;
+              z-index: 3;
+              right: 2.5rem;
+              transition: all 0.5s;
+              &:hover {
+                transform: scale(2);
+                z-index: 20;
+              }
+            }
+          }
+        }
+      }
+      &--right {
+        &--item {
+          background-color: #fff;
+          padding: 3rem 2rem;
+          &--1 {
+            margin-bottom: 3rem;
+            height: 20rem;
+            @include respons(tab-port) {
+              height: 23rem;
+            }
+            @include respons(phone) {
+              height: auto;
+            }
+          }
+          &--2 {
+            margin-bottom: 2rem;
+            height: 18rem;
+            @include respons(tab-port) {
+              height: 20rem;
+            }
+            @include respons(phone) {
+              height: auto;
+            }
+          }
+          &--footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+          }
+          &--left {
+            display: flex;
+            img {
+              margin-right: 1rem;
+            }
+          }
+          &--right {
+            color: $background;
+            font-size: 2.4rem;
+          }
+        }
+        &--btn {
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+    &__book {
+      height: 10rem;
+      background-color: #fff;
+      margin-top: 3rem;
+      text-align: center;
+      &--btn {
+        background-image: linear-gradient(to right, crimson, rgb(145, 16, 41));
+        display: inline-block;
+        color: #fff;
+        padding: 1.4rem 4.4rem;
+        border-radius: 2rem;
+        margin-top: 1.3rem;
+      }
+    }
+  }
+}

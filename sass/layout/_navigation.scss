@@ -1,0 +1,67 @@
+.nav {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background-color: #fff;
+  margin-top: 5rem;
+  @include respons(tab-land) {
+    margin-top: 0;
+  }
+  @include respons(tab-port) {
+    height: 4.5rem;
+  }
+  @include respons(small) {
+    display: none;
+  }
+
+  &__logo {
+    img {
+      width: 3rem;
+    }
+  }
+  &__input {
+    position: relative;
+    input {
+      border: none;
+      border-radius: 1rem;
+      width: 25rem;
+      background-color: rgba(51, 51, 51, 0.226);
+      padding: 0.4rem 1rem;
+      transition: all 0.4s;
+      &:focus {
+        width: 32rem;
+      }
+    }
+    svg {
+      position: absolute;
+      right: 0.3rem;
+      top: 0.5rem;
+      fill: rgba(51, 51, 51, 0.63);
+      height: 1.3rem;
+      @include respons(tab-land) {
+        top: 0.6rem;
+      }
+    }
+  }
+  &__avatar {
+    display: flex;
+    svg {
+      height: 1.6rem;
+      margin-left: 1.2rem;
+      @include respons(tab-land) {
+        margin-top: 0.6rem;
+      }
+    }
+    &--img {
+      display: flex;
+      margin-left: 1.2rem;
+      align-items: center;
+      p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-left: 0.7rem;
+      }
+    }
+  }
+}

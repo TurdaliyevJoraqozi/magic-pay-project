@@ -1,0 +1,12 @@
+footer {
+  margin-bottom: 5rem;
+  @include respons(tab-land) {
+    height: 20rem;
+    background-color: $background;
+  }
+}
+.main__footer {
+  @include respons(phone) {
+    display: none;
+  }
+}

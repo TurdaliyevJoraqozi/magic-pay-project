@@ -8,28 +8,30 @@
     <title>MagicPay</title>
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav container">
       <div class="nav__logo"><img src="/images/logo.png" alt="" /></div>
       <div class="nav__input">
-        <input type="search" />
-        <svg>
-          <use xlink:href="icons/symbol-defs.svg#icon-search"></use>
-        </svg>
+        <input type="text" placeholder="search hotels" />
+        <a href="#">
+          <svg>
+            <use xlink:href="icons/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </a>
       </div>
       <div class="nav__avatar">
         <svg class="nav__avatar-icon--1">
-          <use xlink:href="icons/symbol-defs.svg#icon-drawer"></use>
+          <use xlink:href="icons/icon-2/symbol-defs.svg#icon-bookmark"></use>
         </svg>
         <svg class="nav__avatar-icon--1">
           <use xlink:href="icons/symbol-defs.svg#icon-bubbles4"></use>
         </svg>
-        <div class="nav__avatar-img">
+        <div class="nav__avatar--img">
           <img class="image" src="/images/user-1.jpg" alt="" />
           <p>Plux</p>
         </div>
       </div>
     </nav>
-    <main>
+    <main class="container main">
       <div class="main__left">
         <div class="main__left--menus">
           <div class="main__left-item">
@@ -89,10 +91,10 @@
             </div>
           </div>
           <div class="section__stars__right">
-            <svg class="nav__avatar-icon--1">
+            <svg class="section__stars__right--item">
               <use xlink:href="icons/symbol-defs.svg#icon-location"></use>
             </svg>
-            <a href="#" class="btn">Albufeira Portugal</a>
+            <a href="#" class="btn star__btn">Albufeira Portugal</a>
             <div class="section__stars__right-votes">
               <h3>8.6</h3>
               <p>429 votes</p>
@@ -114,6 +116,7 @@
                 nemo ex.
               </span>
             </div>
+            <div class="draw"></div>
             <div class="section__letters--left--middle">
               <ul
                 class="section__letters--left--middle section__letters--left--middle--1"
@@ -140,66 +143,89 @@
                 <li><span>></span> <a href="#">Perfect for familes</a></li>
               </ul>
             </div>
+            <div class="draw"></div>
             <div class="section__letters--left--footer">
-              <div class="paragraf">
-                Lucy and 3others friends recommend this hotel
+              <div class="paragraf section__letters--left--footer--paragraf">
+                <p>Lucy and 3others friends recommend this hotel</p>
               </div>
               <div class="section__letters--left--footer-images">
-                <img class="image" src="/images/user-1.jpg" alt="" />
-                <img class="image" src="/images/user-2.jpg" alt="" />
-                <img class="image" src="/images/user-3.jpg" alt="" />
-                <img class="image" src="/images/user-4.jpg" alt="" />
+                <img
+                  class="image section__letters--left--footer-images section__letters--left--footer-images--1"
+                  src="/images/user-1.jpg"
+                  alt=""
+                />
+                <img
+                  class="image section__letters--left--footer-images section__letters--left--footer-images--2"
+                  src="/images/user-2.jpg"
+                  alt=""
+                />
+                <img
+                  class="image section__letters--left--footer-images section__letters--left--footer-images--3"
+                  src="/images/user-3.jpg"
+                  alt=""
+                />
+                <img
+                  class="image section__letters--left--footer-images section__letters--left--footer-images--4"
+                  src="/images/user-4.jpg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
           <div class="section__letters--right">
             <div
-              class="section__letters--right--item section__letters--right--1"
+              class="section__letters--right--item section__letters--right--item--1"
             >
               <p class="paragraf">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
                 ullam eligendi, dolor aliquid explicabo magni.
               </p>
-              <div class="section__letters--right--item--left">
-                <div>
-                  <img src="/images/user-1.jpg" alt="" class="image" />
+              <div class="section__letters--right--item--footer">
+                <div class="section__letters--right--item--left">
+                  <div>
+                    <img src="/images/user-1.jpg" alt="" class="image" />
+                  </div>
+                  <div class="section__letters--right--item--defination">
+                    <h3>NICK SMITH</h3>
+                    <p>Feb 23rd, 2017</p>
+                  </div>
                 </div>
-                <div class="section__letters--right--item--defination">
-                  <h3>NICK SMITH</h3>
-                  <p>Feb 23rd, 2017</p>
-                </div>
+                <div class="section__letters--right--item--right">7.8</div>
               </div>
-              <div class="section__letters--right--item--right">7.8</div>
             </div>
             <div
-              class="section__letters--right--item section__letters--right--2"
+              class="section__letters--right--item section__letters--right--item--2"
             >
               <p class="paragraf">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
                 ullam eligendi, dolor aliquid explicabo magni.
               </p>
-              <div class="section__letters--right--item--left">
-                <div>
-                  <img src="/images/user-2.jpg" alt="" class="image" />
+              <div class="section__letters--right--item--footer">
+                <div class="section__letters--right--item--left">
+                  <div>
+                    <img src="/images/user-2.jpg" alt="" class="image" />
+                  </div>
+                  <div class="section__letters--right--item--defination">
+                    <h3>MARY THOMAS</h3>
+                    <p>Feb 23rd, 2017</p>
+                  </div>
                 </div>
-                <div class="section__letters--right--item--defination">
-                  <h3>MARY THOMAS</h3>
-                  <p>Feb 23rd, 2017</p>
-                </div>
+                <div class="section__letters--right--item--right">9.3</div>
               </div>
-              <div class="section__letters--right--item--right">9.3</div>
             </div>
-            <a href="#" class="btn">Show all &rarr;</a>
+            <a href="#" class="btn section__letters--right--btn"
+              >Show all &rarr;</a
+            >
           </div>
         </section>
+        <section class="section__book">
+          <div class="heading">
+            good news! we have 4 free rooms for your selected dates!
+          </div>
+          <div class="section__book--btn">BOOK NOW</div>
+        </section>
       </div>
-      <section class="section__book">
-        <div class="heading">
-          good news! we have 4 free rooms for your selected dates!
-        </div>
-        <div class="section__book--btn">BOOK NOW</div>
-      </section>
     </main>
-    <footer></footer>
+    <footer class="container main__footer"></footer>
   </body>
 </html>
